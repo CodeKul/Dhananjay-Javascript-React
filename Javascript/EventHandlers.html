@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+
+    <p id="p1">click here</p>
+    <button ondblclick="displaydata()" onmouseleave="addElement()">Add Element</button>
+
+
+    <!-- whenever you want to execute different functions/statements for same event in that case we can use addEventListener -->
+
+    <!-- onclick - event is triggered when field/element is clicked on 
+    
+    onchange -
+    event is triggered when field/element has been changed on and user
+    moves/focus away from element or moves/focus to next element 
+
+
+    onkeyup -
+    event is triggered after field/element has been changed on for each character user data gets committed 
+
+
+
+    onkeydown-
+   event is triggered before field/element has been changed on for each character user data gets committed 
+
+
+
+   create a form with validation on submit and live validation
+
+
+   https://thisthat.dev/add-event-listener-function-vs-on-property/
+
+
+   https://blog.logrocket.com/react-lifecycle-methods-tutorial-examples/
+-->
+
+    <form action="">
+      <input
+        id="fname"
+        onkeydown="formvalidation()"
+        placeholder="Enter name"
+        type="text"
+      />
+
+      <input type="email" />
+    </form>
+
+    <script>
+      function addElement() {
+        let body = document.body;
+
+        let p = document.createElement("p");
+
+        //let button = document.createElement("button");
+
+        let content = "Hello welcome to codekul";
+
+        body.appendChild(p);
+
+        p.append(content);
+      }
+
+      function formvalidation() {
+        //to access the value of any element use statement as document.getElementById("id-name").value
+        let fname = document.getElementById("fname").value;
+        let body = document.body;
+
+        let p = document.createElement("p");
+
+        let valid = "Name matched";
+
+        let invalid = "Please enter a valid name";
+
+        body.appendChild(p);
+
+        // if (fname === "Sanket") {
+        //     p.append(valid);
+        // } else {
+        //     p.append(invalid)
+        // }
+        //eventOccured()
+
+        (function eventOccured() {
+          console.log(document.getElementById("fname").value);
+        })();
+      }
+
+      const displaydata = () => {
+document.write("Hurray...!!")
+      }
+
+      let p1 = document.getElementById("p1");
+
+      p1.addEventListener("click", function() {
+          document.write("ssshhhh")
+      })
+    </script>
+  </body>
+</html>
