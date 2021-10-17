@@ -13,6 +13,8 @@ export default function DataEffect() {
       });
   },[data]);
 
+
+
   return (
     <div>
         <div className="row d-flex">
