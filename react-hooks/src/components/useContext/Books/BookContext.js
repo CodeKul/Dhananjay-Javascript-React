@@ -6,6 +6,8 @@ export const BookContext = createContext();
 
 export default function BookProvider(props) {
 
+    console.log(BookContext)
+
     const [books, setBooks] = useState([
         {
             bookName: "BAC",

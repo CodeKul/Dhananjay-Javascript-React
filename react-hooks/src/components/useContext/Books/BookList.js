@@ -8,8 +8,10 @@ export default function BookList() {
     console.log(books)
     return (
         <div>
-            {books.map((book) => {
+            {books && books.map((book, id) => {
+                return(
                 <Book bookName={book.bookName} price={book.price}/>
+                )
             })}
         </div>
     )

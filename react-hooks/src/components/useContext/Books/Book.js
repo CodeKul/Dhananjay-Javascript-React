@@ -1,11 +1,14 @@
 import React from 'react'
 
-export default function Book(props) {
+export default function Book({bookName, price, id}) {
+
+
+
     return (
         <div>
-            <li>
-                {props.bookName}
-                {props.price}
+            <li key={id}>
+               Book Name : {bookName}
+               Book Price : {price}
             </li>
         </div>
     )
